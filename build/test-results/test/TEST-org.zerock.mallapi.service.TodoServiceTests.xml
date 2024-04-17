@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.zerock.mallapi.service.TodoServiceTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-17T04:20:02" hostname="songsueun-ui-MacBookPro.local" time="0.467">
+  <properties/>
+  <testcase name="testList()" classname="org.zerock.mallapi.service.TodoServiceTests" time="0.467"/>
+  <system-out><![CDATA[13:20:00.363 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [org.zerock.mallapi.service.TodoServiceTests]: TodoServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:20:00.420 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration org.zerock.mallapi.MallapiApplication for test class org.zerock.mallapi.service.TodoServiceTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.4)
+
+2024-04-17T13:20:00.638+09:00  INFO 80657 --- [mallapi] [    Test worker] o.z.mallapi.service.TodoServiceTests     : Starting TodoServiceTests using Java 17.0.7 with PID 80657 (started by sueun in /Users/sueun/개발표준TF/projects/react01/backend/mallapi)
+2024-04-17T13:20:00.639+09:00  INFO 80657 --- [mallapi] [    Test worker] o.z.mallapi.service.TodoServiceTests     : No active profile set, falling back to 1 default profile: "default"
+2024-04-17T13:20:00.961+09:00  INFO 80657 --- [mallapi] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-17T13:20:00.992+09:00  INFO 80657 --- [mallapi] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 1 JPA repository interface.
+2024-04-17T13:20:01.201+09:00  INFO 80657 --- [mallapi] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-17T13:20:01.232+09:00  INFO 80657 --- [mallapi] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-17T13:20:01.253+09:00  INFO 80657 --- [mallapi] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-17T13:20:01.384+09:00  INFO 80657 --- [mallapi] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-17T13:20:01.400+09:00  INFO 80657 --- [mallapi] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-17T13:20:01.450+09:00  INFO 80657 --- [mallapi] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@203765b2
+2024-04-17T13:20:01.451+09:00  INFO 80657 --- [mallapi] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-17T13:20:01.880+09:00  INFO 80657 --- [mallapi] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-17T13:20:01.909+09:00  INFO 80657 --- [mallapi] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-17T13:20:02.144+09:00  WARN 80657 --- [mallapi] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-17T13:20:02.357+09:00  INFO 80657 --- [mallapi] [    Test worker] o.z.mallapi.service.TodoServiceTests     : Started TodoServiceTests in 1.825 seconds (process running for 2.549)
+Hibernate: 
+    select
+        t1_0.tno,
+        t1_0.complete,
+        t1_0.due_date,
+        t1_0.title,
+        t1_0.writer 
+    from
+        tbl_todo t1_0 
+    order by
+        t1_0.tno desc 
+    limit
+        ?, ?
+Hibernate: 
+    select
+        count(t1_0.tno) 
+    from
+        tbl_todo t1_0
+2024-04-17T13:20:02.830+09:00  INFO 80657 --- [mallapi] [    Test worker] o.z.mallapi.service.TodoServiceTests     : PageResponseDTO(dtoList=[TodoDTO(tno=190, title=Title...90, writer=user00, complete=false, dueDate=2023-12-31), TodoDTO(tno=189, title=Title...89, writer=user00, complete=false, dueDate=2023-12-31), TodoDTO(tno=188, title=Title...88, writer=user00, complete=false, dueDate=2023-12-31), TodoDTO(tno=187, title=Title...87, writer=user00, complete=false, dueDate=2023-12-31), TodoDTO(tno=186, title=Title...86, writer=user00, complete=false, dueDate=2023-12-31), TodoDTO(tno=185, title=Title...85, writer=user00, complete=false, dueDate=2023-12-31), TodoDTO(tno=184, title=Title...84, writer=user00, complete=false, dueDate=2023-12-31), TodoDTO(tno=183, title=Title...83, writer=user00, complete=false, dueDate=2023-12-31), TodoDTO(tno=182, title=Title...82, writer=user00, complete=false, dueDate=2023-12-31), TodoDTO(tno=181, title=Title...81, writer=user00, complete=false, dueDate=2023-12-31)], pageNumList=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10], pageRequestDTO=PageRequestDTO(page=2, size=10), prev=false, next=true, totalCount=199, prevPage=0, nextPage=11, totalPage=10, current=2)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
