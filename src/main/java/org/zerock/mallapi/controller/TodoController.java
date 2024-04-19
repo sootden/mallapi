@@ -34,7 +34,7 @@ public class TodoController {
         log.info("TodoDTO: {}",todoDTO);
 
         Long tno = service.register(todoDTO);
-        return Map.of("TNO : {}", tno);
+        return Map.of("TNO", tno);
     }
 
     @PutMapping("/{tno}")
