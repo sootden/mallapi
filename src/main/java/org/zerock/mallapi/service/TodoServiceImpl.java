@@ -1,7 +1,6 @@
 package org.zerock.mallapi.service;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.log4j.Log4j2;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Page;
@@ -25,7 +24,7 @@ import java.util.stream.Collectors;
 @Transactional
 @Slf4j
 @RequiredArgsConstructor
-public class TodoServiceImple implements TodoService{
+public class TodoServiceImpl implements TodoService{
     private final ModelMapper modelMapper;
     private final TodoRepository todoRepository;
 
@@ -78,7 +77,7 @@ public class TodoServiceImple implements TodoService{
 
         long totalCount = result.getTotalElements();
         PageResponseDTO<TodoDTO> responseDTO =
-                PageResponseDTO.<TodoDTO>withALL()
+                PageResponseDTO.<TodoDTO>withAll()
                         .dtoList(dtoList)
                         .pageRequestDTO(pageRequestDTO)
                         .totalCount(totalCount)

@@ -23,7 +23,7 @@ public class TodoRepositoryTests {
     @Test
     public void test1(){
         log.info("-------------------------");
-        log.info(todoRepository);
+        log.info(""+todoRepository);
     }
 
     @Test
@@ -47,7 +47,7 @@ public class TodoRepositoryTests {
 
         Todo todo = result.orElseThrow();
 
-        log.info(todo);
+        log.info(""+todo);
     }
 
     @Test
@@ -77,8 +77,8 @@ public class TodoRepositoryTests {
 
         Page<Todo> result = todoRepository.findAll(pageable);
 
-        log.info(result.getTotalElements());
+        log.info(""+result.getTotalElements());
 
-        result.getContent().stream().forEach(todo -> log.info(todo));
+        result.getContent().stream().forEach(todo -> log.info(""+todo));
     }
 }
